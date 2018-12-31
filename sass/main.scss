@@ -11,11 +11,13 @@ html{
     margin: 0;
 }
 
-.parallax::after{
+.parallax::before{
     width: 100%;
     height: 100%;
+    left: 0;
+    top: 0;
     position: absolute;
-    z-index: -1;
+    z-index: -5;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,46 +33,53 @@ html{
 body{
     background: #fafafa;
     header{
+        z-index: 5;
         position: fixed;
         width: 100%;
         top: 0;
         background-color: #000;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
         border-bottom: .15rem solid $color_principal;
-
-        div.logo{
-            color: #fff;
-            font-family: $fuente_principal;
-            font-size: 2.5rem;
-            border-left: 1rem solid $color_principal;
-            margin: .5rem;
-        }
-        div.opciones{
-            font-family: $fuente_secundaria;
-            display: none;
-            nav{
-                a{
-                    color: #fff;
-                    text-decoration: none;
-                    padding: 1rem;
-                    &:hover{
-                        background-color: $color_principal;
+        div.contenido{
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            div.logo{
+                color: #fff;
+                font-family: $fuente_principal;
+                font-size: 2.5rem;
+                border-left: 1rem solid $color_principal;
+                margin: .5rem;
+            }
+            div.opciones{
+                font-family: $fuente_secundaria;
+                display: none;
+                nav{
+                    a{
+                        color: #fff;
+                        text-decoration: none;
+                        padding: 1rem;
+                        &:hover{
+                            background-color: $color_principal;
+                        }
                     }
                 }
             }
-        }
-        div.menu-mobile{
-            color: #fff;
-            font-size: 2.5rem;
+            div.menu-mobile{
+                color: #fff;
+                font-size: 2.5rem;
+            }
         }
         @media only screen and ( min-width:768px ){
-            div.menu-mobile{
-                display: none;
-            }
-            div.opciones{
-                display: block;
+            div.contenido{
+                width: 80%;
+                div.menu-mobile{
+                    display: none;
+                }
+                div.opciones{
+                    display: block;
+                }
             }
         }
     }//Termina header
@@ -86,7 +95,8 @@ body{
         justify-content: center;
         align-items: center;
         color: #fff;
-        &::after{
+        position: relative;
+        &::before{
             content: '';
             background-image: url(../img/header.jpg);
         }
@@ -119,7 +129,7 @@ body{
 
 
 
-    
+
     div.services{
         margin: 2rem 0;
         h2{
@@ -145,8 +155,13 @@ body{
                 }
                 h3{
                     font-family: $fuente_secundaria;
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                     margin: 1rem 0;
+                    border-bottom: .2rem solid #f1f1f1;
+                    display: inline-block;
+                    width: 90%;
+                    padding-bottom: .5rem;
+                    text-align: center;
                 }
                 p{
                     font-family: $fuente_secundaria;
@@ -161,27 +176,68 @@ body{
                     :last-child{
                         margin-right: 0;
                     }
-                    h3{
-                        text-align: center;
-                    }
                 }   
             }
         }
     }//termina servicios
+
+
+
+
+
     div.our-technologies{
-        &::after{
+        position: relative;
+        width: 100%;
+        &::before{
             content: '';
             background-image: url(../img/technology.jpg);
         }
         div.contenido{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5rem 0;
             h2{
-
+                font-family: $fuente_secundaria;
+                font-size: 2.5rem;
+                color: #fff;
+                text-align: center;
             }
             nav{
+                margin: 5rem 0;
                 i{
-                    
+                    color: #fff;
+                    font-size: 5rem;
+                    margin-right: 1rem;
+                    text-shadow: 0 0 1rem #000;
+                    margin-bottom: .5rem;
+                    :last-child{
+                        margin-right: 0;
+                    }
                 }
             }
         }
+    }//Termina our technologies
+
+
+
+
+    footer{
+        background-color: #000;
+        width: 100%;
+        border-top: .15rem solid $color_principal;
+        div.contenido{
+            width: 80%;
+            padding: .2rem 0;
+            margin: 0 auto;
+            p{
+                text-align: center;
+                font-size: 1.5rem;
+                color: #fff;
+                font-family: $fuente_principal;
+            }
+        }
     }
-}
+}//Termina body
