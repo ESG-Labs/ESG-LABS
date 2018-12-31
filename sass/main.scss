@@ -1,6 +1,187 @@
+@import "variables";
 html{
     box-sizing: border-box;
+    font-style: 62.5%;
 }
 *,*::after,*::before{
     box-sizing: inherit;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.parallax::after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    $filtro: .7;
+    -moz-filter: brightness($filtro);
+    -webkit-filter: brightness($filtro);
+    filter: brightness($filtro);
+
+}
+
+body{
+    background: #fafafa;
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: .15rem solid $color_principal;
+
+        div.logo{
+            color: #fff;
+            font-family: $fuente_principal;
+            font-size: 2.5rem;
+            border-left: 1rem solid $color_principal;
+            margin: .5rem;
+        }
+        div.opciones{
+            font-family: $fuente_secundaria;
+            display: none;
+            nav{
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 1rem;
+                    &:hover{
+                        background-color: $color_principal;
+                    }
+                }
+            }
+        }
+        div.menu-mobile{
+            color: #fff;
+            font-size: 2.5rem;
+        }
+        @media only screen and ( min-width:768px ){
+            div.menu-mobile{
+                display: none;
+            }
+            div.opciones{
+                display: block;
+            }
+        }
+    }//Termina header
+
+
+
+
+    div.hero{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        &::after{
+            content: '';
+            background-image: url(../img/header.jpg);
+        }
+        div.info{
+            h1{
+                font-family: $fuente_principal;
+                text-align: center;
+                padding: 0;
+                margin: 0;
+                font-size: 4.5rem;
+            }
+            nav{
+                display: flex;
+                justify-content: center;
+                a{
+                    padding: .3rem;
+                    color: #fff;
+                    i{
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+            p{
+                font-family: $fuente_secundaria;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+    }//Termina hero
+
+
+
+    
+    div.services{
+        margin: 2rem 0;
+        h2{
+            font-family: $fuente_secundaria;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        nav{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #fff;
+                padding: 1.5rem;
+                border: .1rem solid #f1f1f1;
+                i{
+                    font-size: 5rem;
+                }
+                h3{
+                    font-family: $fuente_secundaria;
+                    font-size: 2rem;
+                    margin: 1rem 0;
+                }
+                p{
+                    font-family: $fuente_secundaria;
+                    text-align: justify;
+                    font-size: 1.2rem;
+                }
+            }
+            @media only screen and (min-width: 1100px){
+                flex-direction: row;    
+                div{
+                    margin-right: 1rem;
+                    :last-child{
+                        margin-right: 0;
+                    }
+                    h3{
+                        text-align: center;
+                    }
+                }   
+            }
+        }
+    }//termina servicios
+    div.our-technologies{
+        &::after{
+            content: '';
+            background-image: url(../img/technology.jpg);
+        }
+        div.contenido{
+            h2{
+
+            }
+            nav{
+                i{
+                    
+                }
+            }
+        }
+    }
 }
