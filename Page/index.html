@@ -1,28 +1,43 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Varela+Round&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Varela+Round&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="./styles/navigationBar.css" />
+<link rel="stylesheet" href="./styles/page1.css">
+<link rel="stylesheet" href="./styles/page2.css">
+<link rel="stylesheet" href="./styles/page3.css">
 <link rel="stylesheet" href="./styles/overall.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./behaviours/navBarBehaviour.js" /></script>
 
 <body>
-  <div class="navBar">
-    <img src="https://i.imgur.com/UXtW6Lw.png" alt="esg-labs" width="64" height="64">
-    <ul>
-      <li class="menuItem">Home</li>
-      <li class="menuItem">About</li>
-      <li class="menuItem">Our Work</li>
-      <li class="menuItem">Contact</li>
-    </ul>  
-  </div>
-  <section class="page p1">    
-    <div id="mainTextCnt">      
-    <h1>We are a small team with <br>big ambitions and a<br>wide skillset.</h1>
-    <h2>Lets work toghether!</h2>      
-    <input class="callToAction" type="button" value="CHAT WITH US">
-      <i class="fas fa-chevron-right fixup"></i>
-    </input>
+    <div class="navBar onBlueBG">
+        <img src="./Resources/ESG Collective 2020 invr.PNG" alt="esg-labs" width="64" height="64">
+        <ul>
+            <li class="menuItem menuItemOnBlue">Home</li>
+            <li class="menuItem menuItemOnBlue">About</li>
+            <li class="menuItem menuItemOnBlue">Our Work</li>
+            <li class="menuItem menuItemOnBlue">Contact</li>
+        </ul>
     </div>
-  <img class="big-hero" src="https://bit.ly/big-image" alt="ESG-hero-from-pexels" >
-  </section>
-  <section class="page" style="background: blue"></section>
-  <section class="page" style="background: yellow"></section>
+    <section id="section1" class="page p1">
+        <div id="mainTextCnt">
+            <h1>We are a small team with <br>big ambitions and a<br>wide skillset.</h1>
+            <h2>Lets work toghether!</h2>
+            <input class="callToAction" type="button" value="CHAT WITH US"> <i class="fas fa-chevron-right fixup"></i>
+            </input>
+        </div>
+        <img class="bgShape1" src="./Resources/shape1.svg">
+        <!-- <img class="heroBG" src="./Resources/hero_pexels.jpeg" alt="ESG_pexels_photo_by_" > -->
+    </section>
+    <section id="section2" class="page p2" style="background: white">
+        <img class="bgShape2" src="./Resources/shape2.svg">
+    </section>
+    <section id="section3" class="page p3">
+        <!--<img class="bgShape3" src="./Resources/shape3.svg">-->
+    </section>
+    <section id="section4" class="page p4">
+        <!--<img class="bgShape1" src="./Resources/shape1.svg">-->
+    </section>
 </body>

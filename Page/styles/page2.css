@@ -1,0 +1,9 @@
+.bgShape2{
+    position: absolute;
+    width: 100%;
+    top: 200%;
+    transform: translate(0%, -100%);
+    bottom: 0;  
+    z-index: 1;
+    pointer-events: none;
+}
