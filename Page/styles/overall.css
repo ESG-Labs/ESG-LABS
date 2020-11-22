@@ -1,0 +1,114 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+    /*font-family: 'Varela Round', sans-serif;*/
+    /*scroll-snap-type: y mandatory; /*save for the mobile version*/
+    --main-bg-color: #41ABF0;
+    /*overflow-x: hidden;*/
+    /*
+      To fix:
+    - bg
+        img with 10% opacity
+        background: gradiend color
+      doesnt look right, and the image overflows the secion of the page
+    - SVGs
+      havent added the bottom SVGs, copy this code to a local workspace to use
+      properly the SVGs, logos and images.
+    - SVG add the parallax effects on the sections
+    - add the 3d effects on the proyects showcase.
+    */
+  }
+  
+  .big-hero{
+    position: absolute;
+    object-fit: cover;
+    transform: scaleX(-1)
+               translate(0%, -15%);
+    opacity: 0.15;
+    filter: blur(4px); 
+    z-index: -1;
+  }
+  .page{  
+    /*position: sticky;*/
+    width: 100%;
+    height: 100vh;
+    /*scroll-snap-align: start; /*save for mobile*/
+    min-height: 15rem; 
+    z-index: 2;
+  }
+  
+  .p1{
+    /*background: linear-gradient(127.33deg, rgba(69, 175, 245, 0.6) 24.54%, rgba(132, 206, 255, 0.6) 56.95%);  */
+    background: linear-gradient(127.33deg, #45AFF5 24.54%, #84CEFF 56.95%);
+  }
+  
+  /**/
+  #mainTextCnt{
+    position: absolute;
+    transform: translate(20vw, 60%);
+    color: white;
+  }
+  
+  h1{
+    font-size: 55px;
+    font-weight: 800; 
+    margin-bottom: 0;
+  }
+  .callToAction{
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 18px;  
+    padding: 1.5em;  
+    padding-right: 2.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    cursor: pointer;
+    color: var(--main-bg-color);
+  }
+  .callToAction:hover{
+    opacity: 0.9;
+  }
+  .callToAction:focus{
+    outline: none;
+  }
+  .callToAction:active{
+    filter:invert(100%);
+  }
+  .fixup{
+    transform: translate(-375%, -2%);
+    color: var(--main-bg-color);
+  }
+  
+  /*nav bar*/
+  .navBar{
+    position: fixed; 
+    width: 87%;
+    color: white;
+    right: 50%;
+    transform:translate(50%, 0%);
+    font-weight: 700;
+  }
+  ul{ 
+    position:absolute;
+    right: 0;
+    top: 10%;
+    display: inline; 
+  }
+  li{  
+    display: inline;
+    cursor: pointer;  
+  }
+  
+  .menuItem{
+    margin-right:1em;
+    padding:.5em;
+    border-radius: 6px;
+  }
+  
+  .menuItem:hover{
+    color: var(--main-bg-color);
+    background-color: white;
+  }
