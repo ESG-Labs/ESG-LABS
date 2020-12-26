@@ -21,23 +21,32 @@
             <li class="menuItem menuItemOnBlue">Contact</li>
         </ul>
     </div>
-    <section id="section1" class="page p1">
-        <div id="mainTextCnt">
-            <h1>We are a small team with <br>big ambitions and a<br>wide skillset.</h1>
-            <h2>Lets work toghether!</h2>
-            <input class="callToAction" type="button" value="CHAT WITH US"> <i class="fas fa-chevron-right fixup"></i>
-            </input>
-        </div>
-        <img class="bgShape1" src="./Resources/shape1.svg">
-        <!-- <img class="heroBG" src="./Resources/hero_pexels.jpeg" alt="ESG_pexels_photo_by_" > -->
-    </section>
-    <section id="section2" class="page p2" style="background: white">
-        <img class="bgShape2" src="./Resources/shape2.svg">
+    <!-- the previous code for the webpage-->
+    <div class="page p1">        
+            <div id="mainTextCnt" data-tilt data-tilt-max="10" data-tilt-speed="1000" data-tilt-transition="true" data-tilt-full-page-listening>
+                <h1>We are a small team with <br>big ambitions and a<br>wide skillset.</h1>
+                <h2>Lets work toghether!</h2>
+                <input class="callToAction" type="button" value="CHAT WITH US">                    
+                    <i class="fas fa-chevron-right fixup"></i>
+                </input>
+            </div>        
+        <div class="frontShape1"></div>
+        <div class="bgShape1 p1">
+            <img class="scrollDownIcon" draggable="false" src="Resources/noun_mouse scroll_down_Nikita_Cherednikov.png" style="filter: invert(100%);">
+        </div> <!-- for some reason this is the blue cover -->
+        <!--<img draggable="false" class="bgShape1 p1" src="./Resources/shape1.svg">-->
+        <img draggable="false" class="bgpic" src="./Resources/hero_pexels.jpeg" style="filter: blur(4px);"  data-tilt-full-page-listening>
+        <!--<img draggable="false" class="bgpic" src="./Resources/hero_pexels.jpeg" style="filter: blur(0vw); transform: scale(1);">-->
+      </div>
+
+    <section id="section2" class="page p2">
+        <div class="bgShape2 frontShape2"></div>
     </section>
     <section id="section3" class="page p3">
         <!--<img class="bgShape3" src="./Resources/shape3.svg">-->
     </section>
     <section id="section4" class="page p4">
         <!--<img class="bgShape1" src="./Resources/shape1.svg">-->
-    </section>
+    </section>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>   
 </body>

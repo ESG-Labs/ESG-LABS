@@ -6,10 +6,10 @@
     right: 50%;
     transform:translate(50%, 0%);
     font-weight: 700;
-    z-index: 3;
+    z-index: 4;
     /*--main-bg-color: #41ABF0;*/
-    --navBarOnWhite: #65BEF8;
-    --navBarOnBlue: #ffffff;
+    --navBarOnWhite: #FA5E1F;
+    --navBarOnBlue: white;
   }
   a{
       text-decoration: none;
@@ -29,6 +29,7 @@
     margin-right:1em;
     padding:.5em;
     border-radius: 6px;
+    transition: .20s ease-in-out;
   }
   .menuItem:hover{
     color: var(--navBarOnWhite);

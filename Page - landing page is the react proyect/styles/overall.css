@@ -3,9 +3,10 @@ html,body{
     margin: 0;
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
+    z-index: 2;
     /*font-family: 'Varela Round', sans-serif;*/
     /*scroll-snap-type: y mandatory; /*save for the mobile version*/
-    --main-bg-color: #41ABF0;
+    --main-bg-color: #FA5E1F;
     /*overflow-x: hidden;*/
     /*
       To fix:
