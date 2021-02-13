@@ -1,0 +1,24 @@
+.navigationBar{
+    position: fixed;
+    top: 0;
+    display: inline;
+    border: 1px solid red;
+    width: 100%;
+}
+
+ul{
+    position: relative;
+    display: inline-flex;
+    list-style: none;
+}
+
+li{    
+    margin-left: 1em;
+    border: 1px solid white;
+}
+
+.logo{    
+    height: 80px;
+    pointer-events: none;
+    border: 1px solid white;
+}
