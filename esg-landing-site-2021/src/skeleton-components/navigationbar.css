@@ -1,24 +1,29 @@
-.navigationBar{
-    position: fixed;
+.navBar{    
+    position: fixed; 
     top: 0;
-    display: inline;
+    width: 100vw;
+    color: white;
+    font-weight: 500;
     border: 1px solid red;
-    width: 100%;
-}
-
-ul{
-    position: relative;
     display: inline-flex;
-    list-style: none;
-}
+    /*add glassmorphism when scrolling down*/   
+  }
+  .menuLinks{    
+    position: relative;
+    display: right;    
+    width: fit-content;
+    right: 0;    
+    border: 1px solid red;
+  }
+  
+  .menuItem{
+    cursor: pointer;
+    margin-right:1em;    
+    border: 1px solid red;
+  }
 
-li{    
-    margin-left: 1em;
-    border: 1px solid white;
-}
-
-.logo{    
-    height: 80px;
-    pointer-events: none;
-    border: 1px solid white;
-}
+  img{
+    display: inherit;
+    left: 0;
+    border: 1px solid red;
+  }
